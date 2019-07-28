@@ -5,6 +5,7 @@ body{
 #mainNavbar {
     font-size: 1.5rem;
     font-weight: 100;    
+    height: 2.7rem;
 }
 
 #mainNavbar .nav-link {
@@ -45,4 +46,5 @@ body{
 }
 .scrolled{
     background-color: rgb(218, 140, 218);
+    transition: background 500ms;
 }

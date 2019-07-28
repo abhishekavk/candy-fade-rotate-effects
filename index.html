@@ -22,7 +22,7 @@
 <body>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<nav id="mainNavbar" class="navbar fixed-top navbar-expand-md">
+	<nav id="mainNavbar" class="navbar fixed-top navbar-expand-md py-0">
 		<a href="#" class="navbar-brand text-danger">CANDY</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
 			aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,6 +129,8 @@
 	<script>
 		$(window).scroll(function () {
 			var scrollTop = $(this).scrollTop();
+			var $nav = $("#mainNavbar");
+            $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
 
 			$('#sec2 img').css({
 				opacity: function () {
@@ -147,7 +149,6 @@
 				}
 			});
 
-			$('#mainNavbar').toggleClass("scrolled", $(this).scrollTop() > $(this).height());
 		});
 	</script>
 </body>
